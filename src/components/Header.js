@@ -7,12 +7,24 @@ const Container = styled.header`
     justify-content: space-between;
     @media (max-width: 567px) {
         flex-direction: column;
-        gap: 2rem;
+        gap: 2.5rem;
+        align-items: start;
   }
 `
 // ============= TITLE CONTAINER ===========
 const TitleContainer = styled.div`
-    
+    @media (max-width: 567px) {
+        position: relative;
+        width: 100%;
+     &::after {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: ${({theme})=>theme.darkText};
+        position: absolute;
+        bottom: -20px;
+     }
+  }
 `
 
 const Title = styled.h1`
@@ -20,23 +32,21 @@ const Title = styled.h1`
     text-transform: capitalize;
     font-size: 1.75rem;
     padding-bottom: 5px;
-    @media (max-width: 567px) {
-        text-align: center;
-  }
 `
 
 const Followers = styled.p`
     color: ${({theme})=>theme.darkText};
     text-transform: capitalize;
-    @media (max-width: 567px) {
-        text-align: center;
-  }
 `
 // ============= TOGGLE CONTAINER ===========
 const ToggleContainer = styled.div`
     display: flex;
     align-items: center;
     gap: 10px;
+    @media (max-width: 567px) {
+        width: 100%;
+        justify-content: space-between;
+  }
 `
 
 const ToggleText = styled.label`
