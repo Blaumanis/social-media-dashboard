@@ -70,23 +70,6 @@ const Button = styled.button`
 `
 
 const Intro = ({setRemove}) => {
-
-    let h2 = document.querySelector('h2')
-
-    let i = 0;
-    let text = 'Social Media Dashboard';
-    let speed = 100;
-
-    function typeWriter(){
-        if(i < text.length) {
-            h2.innerText += text.charAt(i)
-            i++;
-            setTimeout(typeWriter, speed)
-        }
-    }
-
-    // typeWriter()
-
   return (
     <Container>
         <h2></h2>
